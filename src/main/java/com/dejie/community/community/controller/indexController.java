@@ -1,4 +1,4 @@
-package com.dejie.community.community;
+package com.dejie.community.community.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
