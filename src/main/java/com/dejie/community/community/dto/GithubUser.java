@@ -1,4 +1,4 @@
-package com.dejie.community.community.Provider;
+package com.dejie.community.community.dto;
 
 public class GithubUser {
     private String name;
