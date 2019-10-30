@@ -7,9 +7,17 @@ public class Question {
     private String tag;
     private Long gmtCreate;
     private Long gmtModified;
+    private Integer Creator;
     private Integer viewCount;
     private Integer likeCount;
     private Integer commentCount;
+    public Integer getCreator() {
+        return Creator;
+    }
+
+    public void setCreator(Integer creator) {
+        Creator = creator;
+    }
 
     public Integer getId() {
         return id;

@@ -69,7 +69,9 @@
                     <label for="title">添加标签：</label>
                     <input type="text" class="form-control" id="tag" name="tag" placeholder="输入标签，以,分隔">
                 </div>
-                <button type="button" class="btn btn-success btn-publish">确认发布</button>
+
+                <span class="alert alert-danger" th:text="${error}"></span>
+                <button type="submit" class="btn btn-success btn-publish">确认发布</button>
             </form>
         </div>
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
