@@ -24,17 +24,33 @@ public class publishController {
     private UserMapper userMapper;
 
     @GetMapping("/publish")
-     public String PublishController(){
+     public String Publish(){
         return "publish";
     }
     @PostMapping("/publish")
     public String doPublish(
-            @RequestParam("title") String title,
-            @RequestParam("description") String description,
-            @RequestParam("tag") String tag,
+            @RequestParam(value = "title",required = false) String title,
+            @RequestParam(value = "description",required = false) String description,
+            @RequestParam(value = "tag",required = false) String tag,
             HttpServletRequest request,
-            Model model
-    ){
+            Model model){
+        model.addAttribute("title",title);
+        model.addAttribute("description",description);
+        model.addAttribute("tag",tag);
+        if(title==null||title==""){
+            model.addAttribute("error","标题不能为空");
+            return "publish";
+        }
+        if(description==null||description==""){
+            model.addAttribute("error","问题补充不能为空");
+            return "publish";
+        }
+        if(tag==null||tag==""){
+            model.addAttribute("error","标签不能为空");
+            return "publish";
+        }
+
+
 
 
         User user=null;
@@ -61,7 +77,7 @@ public class publishController {
         question.setCreator(user.getId());
         question.setGmtCreate(System.currentTimeMillis());
         question.setGmtModified(question.getGmtCreate());
-        questionMapper.creat(question);
+        questionMapper.create(question);
         return  "redirect:/";
 
     }
