@@ -5,3 +5,6 @@
 *.iml
 out
 gen
+target/classes/db/migration/V3__Add_avatar_url_to_user_table.sql
+target/generated-sources/
+target/generated-test-sources/

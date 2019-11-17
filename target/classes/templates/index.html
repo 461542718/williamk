@@ -6,6 +6,11 @@
     <title>社区</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/community.css">
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
@@ -15,12 +20,12 @@
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">williamK</span>
+                <span class="sr-only" >williamK</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">williamK</a>
+            <a class="navbar-brand" href="/">williamK</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -38,8 +43,8 @@
                     <a href="/publish">发布</a>
                 </li>
                 <li class="dropdown" th:if="${session.user != null}" >
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" th:text="${session.user.getName()}"><span class="caret"></span></a>
-                    <ul class="dropdown-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span th:text="${session.user.getName()}"></span><span class="caret" ></span></a>
+                    <ul class="dropdown-menu" >
                         <li><a href="#">消息中心</a></li>
                         <li><a href="#">个人信息</a></li>
                         <li><a href="#">退出登录</a></li>
@@ -58,5 +63,27 @@
         </div>
     </div>
 </nav>
+<div class="container-fluid main">
+    <div class="row">
+        <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+            <h2><span class="glyphicon glyphicon-list" aria-hidden="true"></span>发现</h2>
+            <hr>
+            <div class="media">
+                <div class="media-left">
+                    <a href="#">
+                        <img class="media-object img-thumbnail" src="https://avatars3.githubusercontent.com/u/49867913?v=4" >
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">怎么快速学会 SpringBoot 开发</h4>
+                    学习从来就没有捷径  <br> <span class="text-desc">2个回复 · 31次浏览 · 1小时前</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+            <h3>热门话题</h3>
+        </div>
+    </div>
+</div>
 </body>
 </html>
