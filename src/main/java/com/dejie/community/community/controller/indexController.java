@@ -1,16 +1,13 @@
 package com.dejie.community.community.controller;
 
 import com.dejie.community.community.dto.QuestionDTO;
-import com.dejie.community.community.mapper.QuestionMapper;
 import com.dejie.community.community.mapper.UserMapper;
-import com.dejie.community.community.model.Question;
 import com.dejie.community.community.model.User;
 import com.dejie.community.community.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
