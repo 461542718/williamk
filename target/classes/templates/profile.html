@@ -2,8 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-
-    <title>社区</title>
+    <title>个人中心</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/community.css">
@@ -14,18 +13,12 @@
     <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
-
 <div th:insert="navigation::nav"></div>
-
 <div class="container-fluid main">
     <div class="row">
         <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
             <h2><span class="glyphicon glyphicon-list" aria-hidden="true"></span>发现</h2>
             <hr>
-
-
-
-
             <div class="media" th:each="question:${pagination.questions}">
                 <div class="media-left">
                     <a href="#">
